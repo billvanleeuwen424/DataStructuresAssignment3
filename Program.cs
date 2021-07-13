@@ -24,10 +24,12 @@ namespace Assignment4
                 intarray[i] = add;
             }
 
-            Node searchTest = intTree.Search(root, 6);
-            Node searchTestSibling = intTree.GetSibling(searchTest);
-            Node searchTestAunt = intTree.GetAunt(searchTest);
-            Console.WriteLine(searchTestAunt.value);
+            if (!intTree.ValidateWholeTree(root))
+            {
+                Console.WriteLine("Tree Not Valid");
+            }
+            //Node searchTest = intTree.Search(root, 11);
+            //intTree.Delete(searchTest);
         }
     }
 }
